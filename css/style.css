@@ -1,0 +1,42 @@
+.floatingnav {
+  position: fixed;
+  list-style-type: none;
+  margin: 0;
+  padding: 0px;
+}
+
+a:link { 
+  text-decoration: none;
+  
+}
+a:hover {
+
+}
+a:active{
+
+}
+a:active{
+
+}
+
+img {
+  display: block;
+  margin-top: 4em;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+  min-width: 200px;
+  max-width: 350px;
+  border-radius: 50%;
+  }
+
+  h4 {
+    padding: 2em;
+  }
+
+  p {
+    padding-left: 4em;
+    padding-right: 4em;
+    line-height: 1.4;
+    font-family: 'Supermercado One', cursive;
+    }
