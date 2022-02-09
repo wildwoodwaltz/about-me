@@ -10,9 +10,9 @@ function questionOne() {
   // prompt
   let questionVideoGames = prompt('Do you think Tai likes video games?').toLowerCase();
 
-  if (questionVideoGames === 'y' || questionVideoGames === 'yes' ) {
+  if (questionVideoGames === 'y' || questionVideoGames === 'yes') {
     alert('That is correct, I adore them as one of my main entertainment staples');
-    ansCt = ansCt++; 
+    ansCt++; 
     // console.log('They answered ' + questionVideoGames + ' this is correct');
   }
 
@@ -34,7 +34,7 @@ function questionTwo() {
 
   if (questionFamily === 'n' || questionFamily === 'no' ) {
     alert('That is correct, I have many siblings and my extended family is even bigger. Almost 100+ people');
-    ansCt = ansCt++; 
+    ansCt++; 
     // console.log('They answered ' + questionFamily + ' this is correct');
   }
 
@@ -52,16 +52,16 @@ questionTwo();
 
 function questionThree() {
 
-  let questionGlasses = prompt('Does Tai Like Video Games?').toLowerCase();
+  let questionGlasses = prompt('Does Tai wear Glasses?').toLowerCase();
 
   if (questionGlasses === 'y' || questionGlasses === 'yes' ) {
-    alert('That is correct, ');
-    ansCt = ansCt++; 
+    alert('That is correct, I wear them almost all the time, but I also wear contacts.');
+    ansCt++; 
     // console.log('They answered ' + questionGlasses + ' this is correct');
   }
 
   else if (questionGlasses === 'n' || questionGlasses === 'no') {
-    alert('That is incorrect, video games are cool!');
+    alert('That is incorrect, in fact I own several pairs that I swap between');
     // console.log('They answered ' + questionGlasses + ' this is incorrect');
   }
   else {
@@ -83,7 +83,7 @@ function questionFour() {
 
   else if (questionPronouns === 'n' || questionPronouns === 'no') {
     alert('That is correct, I in fact use them/them pronouns. Thanks for remembering.');
-    ansCt = ansCt++; 
+    ansCt++; 
     // console.log('They answered ' + questionPronouns + ' this is correct');
   }
   else {
@@ -105,7 +105,7 @@ function questionFive() {
 
   else if (questionWork === 'n' || questionWork === 'no') {
     alert('That is correct, I was a medical technician.');
-    ansCt = ansCt++; 
+    ansCt++; 
     // console.log('They answered ' + questionWork + ' this is correct');
   }
   else {
@@ -133,25 +133,43 @@ while(guesses && !correctNum){
   // let myGuess = prompt('Who is kinda sus?')
   let myGuess = prompt('Ok I\'ve come up with a number between 1 and 10');
   
-  alert('You think it was ' + myGuess '?');
+  alert('You think it was ' + myGuess + '?');
   // subtract number of guesses
   guesses--;
   // check for win condition and if they are correct set winc ondition true to cause while contion to be false to stop function
-  if(myGuess === mysteryNumber){
-    foundSus = true;
+  if(myGuess == mysteryNumber){
+    correctNum = true;
+    ansCt++;
   // Give win message
   alert(`congrats! it was in fact ${mysteryNumber}`)
-} else if (mysteryNumber > myGuess) {
-  alert(`Sorry ${firstName}${myGuess} is too high, try again. You have ${guesses} guesses remaining.`);
 } else if (mysteryNumber < myGuess) {
+  alert(`Sorry ${firstName}, ${myGuess} is too high, try again. You have ${guesses} guesses remaining.`);
+} else if (mysteryNumber > myGuess) {
   alert(`Sorry ${firstName}, ${myGuess} is too low, try again. You have ${guesses} guesses remaining.`);
 } else if (typeof myGuess === 'string' || myGuess instanceof String) {
   alert(`You know that you need to actually enter in a  number, by the way that counted as a guess, you have ${guesses} chances left.`)
 } else {
   alert(`You should really try.`)
 }
+}
+}
 
 questionSix();
+
+function questionSeven(){
+  let rainbow = ['RED', 'ORANGE', 'YELLOW', 'GREEN', 'BLUE', 'INDIGO', 'VIOLET']
+  let colorAns = rainbow[5]
+  for(let i = 0; i <= 6; i++){
+    let colorGuess = prompt(`Which of these colors in the rainbow am I thinking of? ${rainbow}`).toUpperCase();
+    console.log(colorGuess);
+    if(colorAns == colorGuess){
+    ansCt++;
+    i = 6;
+    }
+  }
+}
+
+questionSeven()
 
 alert('Thank you for playing my guessing game ' + firstName + ' you got ' + ansCt + ' of 7 correct. Here is a little bit more about me!');
 
