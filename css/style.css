@@ -13,15 +13,16 @@ li a {
    width: 100px;
    background-color: #98f5e1;
    color: black;
-
 }
+
 a:link { 
   text-decoration: none;
-  
 }
+
 a:hover {
   background-color: #ffcfd2;
 }
+
 a:active{
     background-color: #f3c4fb;
 }
