@@ -1,6 +1,6 @@
 'use strict';
 
-
+let ansCt = 0;
 
 let firstName = prompt('Hello! What is your name?');
 //console.log(firstName);
@@ -12,6 +12,7 @@ function questionOne() {
 
   if (questionVideoGames === 'y' || questionVideoGames === 'yes' ) {
     alert('That is correct, I adore them as one of my main entertainment staples');
+    let ansCt = ansCt++; 
     // console.log('They answered ' + questionVideoGames + ' this is correct');
   }
 
@@ -33,6 +34,7 @@ function questionTwo() {
 
   if (questionFamily === 'n' || questionFamily === 'no' ) {
     alert('That is correct, I have many siblings and my extended family is even bigger. Almost 100+ people');
+    let ansCt = ansCt++; 
     // console.log('They answered ' + questionFamily + ' this is correct');
   }
 
@@ -54,6 +56,7 @@ function questionThree() {
 
   if (questionGlasses === 'y' || questionGlasses === 'yes' ) {
     alert('That is correct, ');
+    let ansCt = ansCt++; 
     // console.log('They answered ' + questionGlasses + ' this is correct');
   }
 
@@ -80,6 +83,7 @@ function questionFour() {
 
   else if (questionPronouns === 'n' || questionPronouns === 'no') {
     alert('That is correct, I in fact use them/them pronouns. Thanks for remembering.');
+    let ansCt = ansCt++; 
     // console.log('They answered ' + questionPronouns + ' this is correct');
   }
   else {
@@ -101,6 +105,7 @@ function questionFive() {
 
   else if (questionWork === 'n' || questionWork === 'no') {
     alert('That is correct, I was a medical technician.');
+    let ansCt = ansCt++; 
     // console.log('They answered ' + questionWork + ' this is correct');
   }
   else {
@@ -111,5 +116,5 @@ function questionFive() {
 
 questionFive();
 
-alert('Thank you for playing my guessing game ' + firstName + ' here is a little bit more about me');
+alert('Thank you for playing my guessing game ' + firstName + ' you got ' + ansCt + ' of 7 correct. Here is a little bit more about me!');
 
