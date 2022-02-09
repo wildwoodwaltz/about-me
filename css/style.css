@@ -54,3 +54,12 @@ img {
     line-height: 1.4;
     font-family: 'Supermercado One', cursive;
     }
+
+  #topten {
+    list-style: decimal;
+    display: list-item;
+    margin-left: auto;
+    margin-right: 4em;
+    padding-left: 4em;
+    text-align: center;
+  }
