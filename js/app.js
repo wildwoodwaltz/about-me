@@ -12,7 +12,7 @@ function questionOne() {
 
   if (questionVideoGames === 'y' || questionVideoGames === 'yes' ) {
     alert('That is correct, I adore them as one of my main entertainment staples');
-    let ansCt = ansCt++; 
+    ansCt = ansCt++; 
     // console.log('They answered ' + questionVideoGames + ' this is correct');
   }
 
@@ -34,7 +34,7 @@ function questionTwo() {
 
   if (questionFamily === 'n' || questionFamily === 'no' ) {
     alert('That is correct, I have many siblings and my extended family is even bigger. Almost 100+ people');
-    let ansCt = ansCt++; 
+    ansCt = ansCt++; 
     // console.log('They answered ' + questionFamily + ' this is correct');
   }
 
@@ -56,7 +56,7 @@ function questionThree() {
 
   if (questionGlasses === 'y' || questionGlasses === 'yes' ) {
     alert('That is correct, ');
-    let ansCt = ansCt++; 
+    ansCt = ansCt++; 
     // console.log('They answered ' + questionGlasses + ' this is correct');
   }
 
@@ -83,7 +83,7 @@ function questionFour() {
 
   else if (questionPronouns === 'n' || questionPronouns === 'no') {
     alert('That is correct, I in fact use them/them pronouns. Thanks for remembering.');
-    let ansCt = ansCt++; 
+    ansCt = ansCt++; 
     // console.log('They answered ' + questionPronouns + ' this is correct');
   }
   else {
@@ -105,7 +105,7 @@ function questionFive() {
 
   else if (questionWork === 'n' || questionWork === 'no') {
     alert('That is correct, I was a medical technician.');
-    let ansCt = ansCt++; 
+    ansCt = ansCt++; 
     // console.log('They answered ' + questionWork + ' this is correct');
   }
   else {
@@ -115,6 +115,43 @@ function questionFive() {
 }
 
 questionFive();
+
+alert(`Excellent work ${firstName}, I hope you are ready for some more fun games. Next we will be guessing a number between 1-10. You have 4 chances.`)
+
+function questionSix(){
+  //Set number for guessing
+  let mysteryNumber = Math.floor(Math.random() * 10 + 1);
+  // Log number for my viewing
+  console.log(mysteryNumber)
+  //Set number of guesses
+  let guesses = 4;
+  // Set win condition to false
+  let correctNum= false;
+
+// While #guesses and win condion !setwinconditon run loop
+while(guesses && !correctNum){
+  // let myGuess = prompt('Who is kinda sus?')
+  let myGuess = prompt('Ok I\'ve come up with a number between 1 and 10');
+  
+  alert('You think it was ' + myGuess '?');
+  // subtract number of guesses
+  guesses--;
+  // check for win condition and if they are correct set winc ondition true to cause while contion to be false to stop function
+  if(myGuess === mysteryNumber){
+    foundSus = true;
+  // Give win message
+  alert(`congrats! it was in fact ${mysteryNumber}`)
+} else if (mysteryNumber > myGuess) {
+  alert(`Sorry ${firstName}${myGuess} is too high, try again. You have ${guesses} guesses remaining.`);
+} else if (mysteryNumber < myGuess) {
+  alert(`Sorry ${firstName}, ${myGuess} is too low, try again. You have ${guesses} guesses remaining.`);
+} else if (typeof myGuess === 'string' || myGuess instanceof String) {
+  alert(`You know that you need to actually enter in a  number, by the way that counted as a guess, you have ${guesses} chances left.`)
+} else {
+  alert(`You should really try.`)
+}
+
+questionSix();
 
 alert('Thank you for playing my guessing game ' + firstName + ' you got ' + ansCt + ' of 7 correct. Here is a little bit more about me!');
 
