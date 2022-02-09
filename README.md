@@ -7,6 +7,9 @@ I built a guessing game to help people learn more about me. It accomplishes this
 
 Author: Tyler 'Tai' Egashira
 
+V.1.0 - Created game with 5 questions and base HTML and CSS.
+V.1.1 - Added Top 10 list, Added Correct answer count. added Q's 6 and 7.
+
 ## Links and Resources
 
     Reference
