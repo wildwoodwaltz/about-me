@@ -9,6 +9,7 @@ Author: Tyler 'Tai' Egashira
 
 V.1.0 - Created game with 5 questions and base HTML and CSS.
 V.1.1 - Added Top 10 list, Added Correct answer count. added Q's 6 and 7.
+V.1.2 - Added styling for lists and added work and school
 
 ## Links and Resources
 
@@ -17,6 +18,7 @@ V.1.1 - Added Top 10 list, Added Correct answer count. added Q's 6 and 7.
 - [reset.css code](http://meyerweb.com/eric/tools/css/reset/)
 - [color palette](https://coolors.co/palette/fbf8cc-fde4cf-ffcfd2-f1c0e8-cfbaf0-a3c4f3-90dbf4-8eecf5-98f5e1-b9fbc0)
 - [Supermercado One Font](https://fonts.google.com/specimen/Supermercado+One#standard-styles)
+- [CSS Reference MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference)
 
 ## Reflections and Comments
 
@@ -26,6 +28,8 @@ V.1.1 - Added Top 10 list, Added Correct answer count. added Q's 6 and 7.
 - Certain attributes in CSS must be done in a specific order or else formatting is incorrect.
 - Reset CSS pages help to give clean formatting to your site so it looks similar across platforms.
 - Pay careful attention to formatting, and where semicolons should go.
+- BE SPECIFIC ABOUT YOUR CSS SELECTORS!
+- Still can't figure or wrap my head around nested loops... will get there eventually.
 
 ### Comments
 
