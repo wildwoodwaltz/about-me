@@ -5,21 +5,24 @@ let ansCt = 0;
 let firstName = prompt('Hello! What is your name?');
 //console.log(firstName);
 alert('Before we learn more about me ' + firstName + ', I\'d like to play a little guessing game.');
+function questionOne(){
 
-let questionVideoGames = prompt('Do you think Tai likes video games?').toLowerCase();
-
-if (questionVideoGames === 'y' || questionVideoGames === 'yes') {
-  alert('That is correct, I adore them as one of my main entertainment staples');
-  ansCt++;
-  // console.log('They answered ' + questionVideoGames + ' this is correct');
-}
-
-else if (questionVideoGames === 'n' || questionVideoGames === 'no') {
-  alert('That is incorrect, video games are cool!');
-  // console.log('They answered ' + questionVideoGames + ' this is incorrect');
-}
-else {
-  alert('please answer yes or no');
+  let questionVideoGames = prompt('Do you think Tai likes video games?').toLowerCase();
+  
+  if (questionVideoGames === 'y' || questionVideoGames === 'yes') {
+    alert('That is correct, I adore them as one of my main entertainment staples');
+    ansCt++;
+    // console.log('They answered ' + questionVideoGames + ' this is correct');
+  }
+  
+  else if (questionVideoGames === 'n' || questionVideoGames === 'no') {
+    alert('That is incorrect, video games are cool!');
+    // console.log('They answered ' + questionVideoGames + ' this is incorrect');
+  }
+  else {
+    alert('please answer yes or no');
+    questionOne();
+  }
 }
 
 let questionFamily = prompt('Does Tai have a small family?').toLowerCase();
