@@ -45,21 +45,24 @@ function questionTwo(){
   }
 }
   
+function questionThree(){
 
-let questionGlasses = prompt('Does Tai wear Glasses?').toLowerCase();
-
-if (questionGlasses === 'y' || questionGlasses === 'yes') {
-  alert('That is correct, I wear them almost all the time, but I also wear contacts.');
-  ansCt++;
-  // console.log('They answered ' + questionGlasses + ' this is correct');
-}
-
-else if (questionGlasses === 'n' || questionGlasses === 'no') {
-  alert('That is incorrect, in fact I own several pairs that I swap between');
-  // console.log('They answered ' + questionGlasses + ' this is incorrect');
-}
-else {
-  alert('please answer yes or no');
+  let questionGlasses = prompt('Does Tai wear Glasses?').toLowerCase();
+  
+  if (questionGlasses === 'y' || questionGlasses === 'yes') {
+    alert('That is correct, I wear them almost all the time, but I also wear contacts.');
+    ansCt++;
+    // console.log('They answered ' + questionGlasses + ' this is correct');
+  }
+  
+  else if (questionGlasses === 'n' || questionGlasses === 'no') {
+    alert('That is incorrect, in fact I own several pairs that I swap between');
+    // console.log('They answered ' + questionGlasses + ' this is incorrect');
+  }
+  else {
+    alert('please answer yes or no');
+    questionThree();
+  }
 }
 
 let questionPronouns = prompt('Does Tai use He/him Pronouns?').toLowerCase();
