@@ -123,12 +123,11 @@ while (guesses && !correctNum) {
   }
 }
 
-let rainbow = ['YELLOW', 'CYAN', 'GREEN', 'INDIGO', 'VIOLET'];
-let colorAns = rainbow;
+let rainbow = ['YELLOW', 'CYAN', 'GREEN', 'INDIGO', 'VIOLET', 'BLACK'];
 for (let i = 0; i <= 6; i++) {
   let colorGuess = prompt('I have a lot of colors that I enjoy, what do you think is one?').toUpperCase();
   console.log(colorGuess);
-  if (colorAns === colorGuess) {
+  if (rainbow[0] === colorGuess || rainbow[1] === colorGuess || rainbow[2] === colorGuess || rainbow[3] === colorGuess || rainbow[4] === colorGuess || rainbow[5] === colorGuess) {
     ansCt++;
     i = 6;
   }
