@@ -150,7 +150,7 @@ while(guesses && !correctNum){
 } else if (mysteryNumber > myGuess) {
   alert(`Sorry ${firstName}, ${myGuess} is too low, try again. You have ${guesses} guesses remaining.`);
 } else if (typeof myGuess === 'string' || myGuess instanceof String) {
-  alert(`You know that you need to actually enter in a  number, by the way that counted as a guess, you have ${guesses} chances left.`)
+  alert(`You know that you need to actually enter in a number, by the way that counted as a guess, you have ${guesses} chances left.`)
 }
 }
 // }
@@ -172,7 +172,7 @@ while(guesses && !correctNum){
     }
   }
 // }
-alert (`I really enjoy ${rainbow[5]} and ${rainbow[3]}`)
+alert (`I really enjoy ${rainbow[5]} and ${rainbow[3]}`);
 // questionSeven()
 
 alert('Thank you for playing my guessing game ' + firstName + ' you got ' + ansCt + ' of 7 correct. Here is a little bit more about me!');
