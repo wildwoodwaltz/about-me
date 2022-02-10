@@ -123,19 +123,18 @@ while (guesses && !correctNum) {
   }
 }
 
-let rainbow = ['RED', 'ORANGE', 'YELLOW', 'GREEN', 'BLUE', 'INDIGO', 'VIOLET'];
-let colorAns = rainbow[5];
-let colorAns2 = rainbow[3];
+let rainbow = ['YELLOW', 'CYAN', 'GREEN', 'INDIGO', 'VIOLET'];
+let colorAns = rainbow;
 for (let i = 0; i <= 6; i++) {
-  let colorGuess = prompt(`Which of these colors do I like? ${rainbow}`).toUpperCase();
+  let colorGuess = prompt('I have a lot of colors that I enjoy, what do you think is one?').toUpperCase();
   console.log(colorGuess);
-  if (colorAns === colorGuess || colorAns2 === colorGuess) {
+  if (colorAns === colorGuess) {
     ansCt++;
     i = 6;
   }
 }
 
-alert(`I really enjoy ${rainbow[5]} and ${rainbow[3]}`);
+alert(`I really enjoy these colors ${rainbow}`);
 
 
 alert('Thank you for playing my guessing game ' + firstName + ' you got ' + ansCt + ' of 7 correct. Here is a little bit more about me!');
