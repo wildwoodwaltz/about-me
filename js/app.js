@@ -85,21 +85,25 @@ function questionFour(){
   }
 }
 
-let questionWork = prompt('Did Tai used to work as an Optician?').toLowerCase();
+function questionFive(){
 
-if (questionWork === 'y' || questionWork === 'yes') {
-  alert('That is incorrect, I used to work as a medical technician, an optician is the one that sells and fits glasses');
-  // console.log('They answered ' + questionWork + ' this is incorrect');
+  let questionWork = prompt('Did Tai used to work as an Optician?').toLowerCase();
+  
+  if (questionWork === 'y' || questionWork === 'yes') {
+    alert('That is incorrect, I used to work as a medical technician, an optician is the one that sells and fits glasses');
+    // console.log('They answered ' + questionWork + ' this is incorrect');
+  }
+  
+  else if (questionWork === 'n' || questionWork === 'no') {
+    alert('That is correct, I was a medical technician.');
+    ansCt++;
+    // console.log('They answered ' + questionWork + ' this is correct');
+  }
+  else {
+    alert('please answer yes or no');
+  }
 }
 
-else if (questionWork === 'n' || questionWork === 'no') {
-  alert('That is correct, I was a medical technician.');
-  ansCt++;
-  // console.log('They answered ' + questionWork + ' this is correct');
-}
-else {
-  alert('please answer yes or no');
-}
 alert(`Excellent work ${firstName}, I hope you are ready for some more fun games. Next we will be guessing a number between 1-10. You have 4 chances.`);
 
 //Set number for guessing. Math.random() * 10 sets num 0-9 due to counting starting at 0. add 1 makes it 1-10.
