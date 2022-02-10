@@ -1,18 +1,24 @@
 body {
   background-color: #fbf8cc;
 }
-.floatingnav {
+nav ul.floatingnav {
+  display: inline;
   position: fixed;
+  width: 100%;
   list-style-type: none;
   margin: 0;
-  padding: 15px;
 }
-
+nav ul.floatingnav li {
+  float: left;
+  text-align: center;
+  background-color: #98f5e1;
+}
 li a {
    display: block;
-   width: 100px;
-   background-color: #98f5e1;
    color: black;
+   padding: 15px;
+   width: 100%;
+   
 }
 
 a:link { 
@@ -42,24 +48,35 @@ img {
 
   }
 
-  h4 {
+h4 {
     padding: 2em;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     text-align: center;
   }
 
-  p {
+p {
     padding-left: 4em;
     padding-right: 4em;
     line-height: 1.4;
     font-family: 'Supermercado One', cursive;
     }
 
-  #topten {
+ol {
+    display: block;
     list-style: decimal;
-    display: list-item;
+    text-align: left;
+  }
+#topten {
+    list-style-type: decimal;
+    list-style-position: inside;
     margin-left: auto;
     margin-right: 4em;
     padding-left: 4em;
     text-align: center;
   }
+ul:nth-child(n+2) {
+  list-style-type: disc;
+  margin-left: auto;
+  margin-right: 4em;
+  padding-left: 4em;
+}
