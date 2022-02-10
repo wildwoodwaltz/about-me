@@ -101,47 +101,51 @@ function questionFive(){
   }
   else {
     alert('please answer yes or no');
+    questionFive();
   }
 }
 
-alert(`Excellent work ${firstName}, I hope you are ready for some more fun games. Next we will be guessing a number between 1-10. You have 4 chances.`);
+function questionSix(){
 
-//Set number for guessing. Math.random() * 10 sets num 0-9 due to counting starting at 0. add 1 makes it 1-10.
-let mysteryNumber = Math.floor(Math.random() * 10 + 1);
-// Log number for my viewing
-console.log(mysteryNumber);
-//Set number of guesses
-let guesses = 4;
-// Set win condition to false
-let correctNum = false;
-
-// While #guesses and win condion !setwinconditon run loop
-while (guesses && !correctNum) {
-  // let myGuess = prompt('Who is kinda sus?')
-  let myGuess = prompt('Ok I\'ve come up with a number between 1 and 10');
-
-  alert('You think it was ' + myGuess + '?');
-  // subtract number of guesses
-  guesses--;
-  // check for win condition and if they are correct set winc ondition true to cause while contion to be false to stop function
-  if (guesses === 0) {
-    alert(`The correct answer was ${mysteryNumber}`);
-  }
-  else if (+myGuess === mysteryNumber) {
-    correctNum = true;
-    ansCt++;
-    // Give win message
-    alert(`congrats! it was in fact ${mysteryNumber}`);
-  } else if (mysteryNumber < myGuess) {
-    alert(`Sorry ${firstName}, ${myGuess} is too high, try again. You have ${guesses} guesses remaining.`);
-  } else if (mysteryNumber > myGuess) {
-    alert(`Sorry ${firstName}, ${myGuess} is too low, try again. You have ${guesses} guesses remaining.`);
-  } else if (typeof myGuess === 'string' || myGuess instanceof String) {
-    alert(`You know that you need to actually enter in a number, by the way that counted as a guess, you have ${guesses} chances left.`);
+  alert(`Excellent work ${firstName}, I hope you are ready for some more fun games. Next we will be guessing a number between 1-10. You have 4 chances.`);
+  
+  //Set number for guessing. Math.random() * 10 sets num 0-9 due to counting starting at 0. add 1 makes it 1-10.
+  let mysteryNumber = Math.floor(Math.random() * 10 + 1);
+  // Log number for my viewing
+  console.log(mysteryNumber);
+  //Set number of guesses
+  let guesses = 4;
+  // Set win condition to false
+  let correctNum = false;
+  
+  // While #guesses and win condion !setwinconditon run loop
+  while (guesses && !correctNum) {
+    // let myGuess = prompt('Who is kinda sus?')
+    let myGuess = prompt('Ok I\'ve come up with a number between 1 and 10');
+    
+    alert('You think it was ' + myGuess + '?');
+    // subtract number of guesses
+    guesses--;
+    // check for win condition and if they are correct set winc ondition true to cause while contion to be false to stop function
+    if (guesses === 0) {
+      alert(`The correct answer was ${mysteryNumber}`);
+    }
+    else if (+myGuess === mysteryNumber) {
+      correctNum = true;
+      ansCt++;
+      // Give win message
+      alert(`congrats! it was in fact ${mysteryNumber}`);
+    } else if (mysteryNumber < myGuess) {
+      alert(`Sorry ${firstName}, ${myGuess} is too high, try again. You have ${guesses} guesses remaining.`);
+    } else if (mysteryNumber > myGuess) {
+      alert(`Sorry ${firstName}, ${myGuess} is too low, try again. You have ${guesses} guesses remaining.`);
+    } else if (typeof myGuess === 'string' || myGuess instanceof String) {
+      alert(`You know that you need to actually enter in a number, by the way that counted as a guess, you have ${guesses} chances left.`);
+    }
   }
 }
 
-let rainbow = ['YELLOW', 'CYAN', 'GREEN', 'INDIGO', 'VIOLET', 'BLACK'];
+\let rainbow = ['YELLOW', 'CYAN', 'GREEN', 'INDIGO', 'VIOLET', 'BLACK'];
 for (let i = 0; i <= 6; i++) {
   let colorGuess = prompt('I have a lot of colors that I enjoy, what do you think is one?').toUpperCase();
   console.log(colorGuess);
@@ -155,4 +159,5 @@ alert(`I really enjoy these colors ${rainbow}`);
 
 
 alert('Thank you for playing my guessing game ' + firstName + ' you got ' + ansCt + ' of 7 correct. Here is a little bit more about me!');
+
 
