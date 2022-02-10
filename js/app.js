@@ -8,13 +8,13 @@ alert('Before we learn more about me ' + firstName + ', I\'d like to play a litt
 function questionOne(){
 
   let questionVideoGames = prompt('Do you think Tai likes video games?').toLowerCase();
-  
+
   if (questionVideoGames === 'y' || questionVideoGames === 'yes') {
     alert('That is correct, I adore them as one of my main entertainment staples');
     ansCt++;
     // console.log('They answered ' + questionVideoGames + ' this is correct');
   }
-  
+
   else if (questionVideoGames === 'n' || questionVideoGames === 'no') {
     alert('That is incorrect, video games are cool!');
     // console.log('They answered ' + questionVideoGames + ' this is incorrect');
@@ -25,22 +25,26 @@ function questionOne(){
   }
 }
 
-let questionFamily = prompt('Does Tai have a small family?').toLowerCase();
+function questionTwo(){
 
-if (questionFamily === 'n' || questionFamily === 'no') {
-  alert('That is correct, I have many siblings and my extended family is even bigger. Almost 100+ people');
-  ansCt++;
-  // console.log('They answered ' + questionFamily + ' this is correct');
+  let questionFamily = prompt('Does Tai have a small family?').toLowerCase();
+  
+  if (questionFamily === 'n' || questionFamily === 'no') {
+    alert('That is correct, I have many siblings and my extended family is even bigger. Almost 100+ people');
+    ansCt++;
+    // console.log('They answered ' + questionFamily + ' this is correct');
+  }
+  
+  else if (questionFamily === 'y' || questionFamily === 'no') {
+    alert('That is incorrect, my family is so large we have to rent a whole park out for reunions!');
+    // console.log('They answered ' + questionFamily + ' this is incorrect');
+  }
+  else {
+    alert('please answer yes or no');
+    questionTwo();
+  }
 }
-
-else if (questionFamily === 'y' || questionFamily === 'no') {
-  alert('That is incorrect, my family is so large we have to rent a whole park out for reunions!');
-  // console.log('They answered ' + questionFamily + ' this is incorrect');
-}
-else {
-  alert('please answer yes or no');
-}
-
+  
 
 let questionGlasses = prompt('Does Tai wear Glasses?').toLowerCase();
 
