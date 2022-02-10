@@ -34,7 +34,7 @@ function questionTwo(){
     // console.log('They answered ' + questionFamily + ' this is correct');
   }
 
-  else if (questionFamily === 'y' || questionFamily === 'no') {
+  else if (questionFamily === 'y' || questionFamily === 'yes') {
     alert('That is incorrect, my family is so large we have to rent a whole park out for reunions!');
     // console.log('They answered ' + questionFamily + ' this is incorrect');
   }
