@@ -6,7 +6,7 @@ let firstName = prompt('Hello! What is your name?');
 //console.log(firstName);
 alert('Before we learn more about me ' + firstName + ', I\'d like to play a little guessing game.');
 
-function questionOne() {
+// function questionOne() {
   // prompt
   let questionVideoGames = prompt('Do you think Tai likes video games?').toLowerCase();
 
@@ -22,13 +22,13 @@ function questionOne() {
   }
   else {
     alert('please answer yes or no');
-    questionOne();
+    // questionOne();
   }
-}
+// }
 
-questionOne();
+// questionOne();
 
-function questionTwo() {
+// function questionTwo() {
   // prompt
   let questionFamily = prompt('Does Tai have a small family?').toLowerCase();
 
@@ -44,13 +44,13 @@ function questionTwo() {
   }
   else {
     alert('please answer yes or no');
-    questionTwo();
+    // questionTwo();
   }
-}
+// }
 
-questionTwo();
+// questionTwo();
 
-function questionThree() {
+// function questionThree() {
 
   let questionGlasses = prompt('Does Tai wear Glasses?').toLowerCase();
 
@@ -66,13 +66,13 @@ function questionThree() {
   }
   else {
     alert('please answer yes or no');
-    questionThree();
+    // questionThree();
   }
-}
+// }
 
-questionThree();
+// questionThree();
 
-function questionFour() {
+// function questionFour() {
   // prompt
   let questionPronouns = prompt('Does Tai use He/him Pronouns?').toLowerCase();
 
@@ -88,13 +88,13 @@ function questionFour() {
   }
   else {
     alert('please answer yes or no');
-    questionFour();
+    // questionFour();
   }
-}
+// }
 
-questionFour();
+// questionFour();
 
-function questionFive() {
+// function questionFive() {
 
   let questionWork = prompt('Did Tai used to work as an Optician?').toLowerCase();
 
@@ -110,16 +110,16 @@ function questionFive() {
   }
   else {
     alert('please answer yes or no');
-    questionFive();
+    // questionFive();
   }
-}
+// }
 
-questionFive();
+// questionFive();
 
 alert(`Excellent work ${firstName}, I hope you are ready for some more fun games. Next we will be guessing a number between 1-10. You have 4 chances.`)
 
-function questionSix(){
-  //Set number for guessing
+// function questionSix(){
+  //Set number for guessing. Math.random() * 10 sets num 0-9 due to counting starting at 0. add 1 makes it 1-10.
   let mysteryNumber = Math.floor(Math.random() * 10 + 1);
   // Log number for my viewing
   console.log(mysteryNumber)
@@ -137,7 +137,10 @@ while(guesses && !correctNum){
   // subtract number of guesses
   guesses--;
   // check for win condition and if they are correct set winc ondition true to cause while contion to be false to stop function
-  if(myGuess == mysteryNumber){
+  if (guesses === 0) {
+    alert(`The correct answer was ${mysteryNumber}`);
+}
+  else if(myGuess == mysteryNumber){
     correctNum = true;
     ansCt++;
   // Give win message
@@ -148,15 +151,15 @@ while(guesses && !correctNum){
   alert(`Sorry ${firstName}, ${myGuess} is too low, try again. You have ${guesses} guesses remaining.`);
 } else if (typeof myGuess === 'string' || myGuess instanceof String) {
   alert(`You know that you need to actually enter in a  number, by the way that counted as a guess, you have ${guesses} chances left.`)
-} else {
-  alert(`You should really try.`)
 }
 }
-}
+// }
 
-questionSix();
+// questionSix();
 
-function questionSeven(){
+
+
+// function questionSeven(){
   let rainbow = ['RED', 'ORANGE', 'YELLOW', 'GREEN', 'BLUE', 'INDIGO', 'VIOLET']
   let colorAns = rainbow[5];
   let colorAns2 = rainbow[3];
@@ -168,9 +171,9 @@ function questionSeven(){
     i = 6;
     }
   }
-}
-
-questionSeven()
+// }
+alert (`I really enjoy ${rainbow[5]} and ${rainbow[3]}`)
+// questionSeven()
 
 alert('Thank you for playing my guessing game ' + firstName + ' you got ' + ansCt + ' of 7 correct. Here is a little bit more about me!');
 
