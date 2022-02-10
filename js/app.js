@@ -14,7 +14,6 @@ function questionOne(){
     ansCt++;
     // console.log('They answered ' + questionVideoGames + ' this is correct');
   }
-
   else if (questionVideoGames === 'n' || questionVideoGames === 'no') {
     alert('That is incorrect, video games are cool!');
     // console.log('They answered ' + questionVideoGames + ' this is incorrect');
@@ -28,13 +27,13 @@ function questionOne(){
 function questionTwo(){
 
   let questionFamily = prompt('Does Tai have a small family?').toLowerCase();
-  
+
   if (questionFamily === 'n' || questionFamily === 'no') {
     alert('That is correct, I have many siblings and my extended family is even bigger. Almost 100+ people');
     ansCt++;
     // console.log('They answered ' + questionFamily + ' this is correct');
   }
-  
+
   else if (questionFamily === 'y' || questionFamily === 'no') {
     alert('That is incorrect, my family is so large we have to rent a whole park out for reunions!');
     // console.log('They answered ' + questionFamily + ' this is incorrect');
@@ -44,17 +43,17 @@ function questionTwo(){
     questionTwo();
   }
 }
-  
+
 function questionThree(){
 
   let questionGlasses = prompt('Does Tai wear Glasses?').toLowerCase();
-  
+
   if (questionGlasses === 'y' || questionGlasses === 'yes') {
     alert('That is correct, I wear them almost all the time, but I also wear contacts.');
     ansCt++;
     // console.log('They answered ' + questionGlasses + ' this is correct');
   }
-  
+
   else if (questionGlasses === 'n' || questionGlasses === 'no') {
     alert('That is incorrect, in fact I own several pairs that I swap between');
     // console.log('They answered ' + questionGlasses + ' this is incorrect');
@@ -68,12 +67,12 @@ function questionThree(){
 function questionFour(){
 
   let questionPronouns = prompt('Does Tai use He/him Pronouns?').toLowerCase();
-  
+
   if (questionPronouns === 'y' || questionPronouns === 'yes') {
     alert('That is incorrect, I am non-binary and therefore use they/them');
     // console.log('They answered ' + questionPronouns + ' this is incorrect');
   }
-  
+
   else if (questionPronouns === 'n' || questionPronouns === 'no') {
     alert('That is correct, I in fact use them/them pronouns. Thanks for remembering.');
     ansCt++;
@@ -88,12 +87,12 @@ function questionFour(){
 function questionFive(){
 
   let questionWork = prompt('Did Tai used to work as an Optician?').toLowerCase();
-  
+
   if (questionWork === 'y' || questionWork === 'yes') {
     alert('That is incorrect, I used to work as a medical technician, an optician is the one that sells and fits glasses');
     // console.log('They answered ' + questionWork + ' this is incorrect');
   }
-  
+
   else if (questionWork === 'n' || questionWork === 'no') {
     alert('That is correct, I was a medical technician.');
     ansCt++;
@@ -108,7 +107,7 @@ function questionFive(){
 function questionSix(){
 
   alert(`Excellent work ${firstName}, I hope you are ready for some more fun games. Next we will be guessing a number between 1-10. You have 4 chances.`);
-  
+
   //Set number for guessing. Math.random() * 10 sets num 0-9 due to counting starting at 0. add 1 makes it 1-10.
   let mysteryNumber = Math.floor(Math.random() * 10 + 1);
   // Log number for my viewing
@@ -117,12 +116,12 @@ function questionSix(){
   let guesses = 4;
   // Set win condition to false
   let correctNum = false;
-  
+
   // While #guesses and win condion !setwinconditon run loop
   while (guesses && !correctNum) {
     // let myGuess = prompt('Who is kinda sus?')
     let myGuess = prompt('Ok I\'ve come up with a number between 1 and 10');
-    
+
     alert('You think it was ' + myGuess + '?');
     // subtract number of guesses
     guesses--;
@@ -145,16 +144,26 @@ function questionSix(){
   }
 }
 
-\let rainbow = ['YELLOW', 'CYAN', 'GREEN', 'INDIGO', 'VIOLET', 'BLACK'];
-for (let i = 0; i <= 6; i++) {
-  let colorGuess = prompt('I have a lot of colors that I enjoy, what do you think is one?').toUpperCase();
-  console.log(colorGuess);
-  if (rainbow[0] === colorGuess || rainbow[1] === colorGuess || rainbow[2] === colorGuess || rainbow[3] === colorGuess || rainbow[4] === colorGuess || rainbow[5] === colorGuess) {
-    ansCt++;
-    i = 6;
+let rainbow = ['YELLOW', 'CYAN', 'GREEN', 'INDIGO', 'VIOLET', 'BLACK'];
+function questionSeven(){
+
+  for (let i = 0; i <= 6; i++) {
+    let colorGuess = prompt('I have a lot of colors that I enjoy, what do you think is one?').toUpperCase();
+    console.log(colorGuess);
+    if (rainbow[0] === colorGuess || rainbow[1] === colorGuess || rainbow[2] === colorGuess || rainbow[3] === colorGuess || rainbow[4] === colorGuess || rainbow[5] === colorGuess) {
+      ansCt++;
+      i = 6;
+    }
   }
 }
 
+questionOne();
+questionTwo();
+questionThree();
+questionFour();
+questionFive();
+questionSix();
+questionSeven();
 alert(`I really enjoy these colors ${rainbow}`);
 
 
