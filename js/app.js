@@ -65,20 +65,24 @@ function questionThree(){
   }
 }
 
-let questionPronouns = prompt('Does Tai use He/him Pronouns?').toLowerCase();
+function questionFour(){
 
-if (questionPronouns === 'y' || questionPronouns === 'yes') {
-  alert('That is incorrect, I am non-binary and therefore use they/them');
-  // console.log('They answered ' + questionPronouns + ' this is incorrect');
-}
-
-else if (questionPronouns === 'n' || questionPronouns === 'no') {
-  alert('That is correct, I in fact use them/them pronouns. Thanks for remembering.');
-  ansCt++;
-  // console.log('They answered ' + questionPronouns + ' this is correct');
-}
-else {
-  alert('please answer yes or no');
+  let questionPronouns = prompt('Does Tai use He/him Pronouns?').toLowerCase();
+  
+  if (questionPronouns === 'y' || questionPronouns === 'yes') {
+    alert('That is incorrect, I am non-binary and therefore use they/them');
+    // console.log('They answered ' + questionPronouns + ' this is incorrect');
+  }
+  
+  else if (questionPronouns === 'n' || questionPronouns === 'no') {
+    alert('That is correct, I in fact use them/them pronouns. Thanks for remembering.');
+    ansCt++;
+    // console.log('They answered ' + questionPronouns + ' this is correct');
+  }
+  else {
+    alert('please answer yes or no');
+    questionFour();
+  }
 }
 
 let questionWork = prompt('Did Tai used to work as an Optician?').toLowerCase();
