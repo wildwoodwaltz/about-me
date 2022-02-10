@@ -89,7 +89,7 @@ else {
   alert(`Excellent work ${firstName}, I hope you are ready for some more fun games. Next we will be guessing a number between 1-10. You have 4 chances.`);
 
   //Set number for guessing. Math.random() * 10 sets num 0-9 due to counting starting at 0. add 1 makes it 1-10.
-  let mysteryNumber = Math.floor(Math.random * 10 + 1);
+  let mysteryNumber = Math.floor(Math.random() * 10 + 1);
   // Log number for my viewing
   console.log(mysteryNumber);
   //Set number of guesses
